@@ -1,0 +1,38 @@
+#castContent {
+
+  // Shrink and round cast thumnails
+  .card.overflowPortraitCard.personCard.card-withuserdata {
+
+    width: 4.2cm !important;
+    font-size: 90% !important;
+
+    .cardScalable {
+      width: 3.8cm !important;
+      height: 3.8cm !important;
+      border-radius: 2.5cm;
+    }
+
+    // Round image
+    .cardImageContainer.itemAction,
+    .cardOverlayContainer.itemAction {
+      border-radius: 50% !important;
+    }
+
+    // Remove old image container artifacts
+    .cardPadder {
+      background: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  // Center interaction items visible on hover
+  .cardOverlayButton-br {
+    bottom: 4%;
+    right: 15%;
+    width: 70%;
+  }
+
+  .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light {
+    margin:auto;
+  }
+}

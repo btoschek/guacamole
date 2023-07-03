@@ -19,6 +19,32 @@
   background: var(--color-1);
 }
 
+#castContent .card.overflowPortraitCard.personCard.card-withuserdata {
+  width: 4.2cm !important;
+  font-size: 90% !important;
+}
+#castContent .card.overflowPortraitCard.personCard.card-withuserdata .cardScalable {
+  width: 3.8cm !important;
+  height: 3.8cm !important;
+  border-radius: 2.5cm;
+}
+#castContent .card.overflowPortraitCard.personCard.card-withuserdata .cardImageContainer.itemAction,
+#castContent .card.overflowPortraitCard.personCard.card-withuserdata .cardOverlayContainer.itemAction {
+  border-radius: 50% !important;
+}
+#castContent .card.overflowPortraitCard.personCard.card-withuserdata .cardPadder {
+  background: none !important;
+  box-shadow: none !important;
+}
+#castContent .cardOverlayButton-br {
+  bottom: 4%;
+  right: 15%;
+  width: 70%;
+}
+#castContent .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light {
+  margin: auto;
+}
+
 :root {
   --color-1: #73A761;
   --color-2: #CCE586;
