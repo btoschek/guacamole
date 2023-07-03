@@ -10,6 +10,12 @@
   .backgroundContainer.withBackdrop {
     backdrop-filter: blur(15px);
   }
+  .detailPageWrapperContainer {
+    backdrop-filter: blur(15px);
+  }
+  .detailPageWrapperContainer .detailPagePrimaryContainer {
+    background: transparent;
+  }
 }
 .playedIndicator,
 .countIndicator {
@@ -29,6 +35,19 @@
 .playedIndicator {
   color: var(--color-text);
   background: linear-gradient(-135deg, var(--color-1) 50%, transparent 50%);
+}
+
+.listItemImage.listItemImage-large.itemAction.lazy {
+  height: 130px;
+}
+
+.listItem-content {
+  height: 135px;
+}
+
+.secondary.listItem-overview.listItemBodyText {
+  height: 61px;
+  margin: 0;
 }
 
 .innerCardFooter.fullInnerCardFooter.innerCardFooterClear {

@@ -14,8 +14,19 @@
 // Blur backdrop image backgrounds in item selection views
 // (shows, movies, landing page, album selection)
 @supports (backdrop-filter: blur(15px)) {
+
+  // Landing page background
   .backgroundContainer.withBackdrop {
     backdrop-filter: blur(15px);
+  }
+
+  // Top information bar (rating, FSK, airing years)
+  .detailPageWrapperContainer {
+    backdrop-filter: blur(15px);
+
+    .detailPagePrimaryContainer {
+      background: transparent;
+    }
   }
 }
 
@@ -44,3 +55,22 @@
   background: linear-gradient(-135deg, var(--color-1) 50%, transparent 50%);
 }
 // }}}
+
+// ===========================================================================================
+//    Episodes
+// ===========================================================================================
+
+// Size episode preview images in a more compact way
+.listItemImage.listItemImage-large.itemAction.lazy {
+  height: 130px;
+}
+
+// Decrease space between episodes
+.listItem-content {
+  height: 135px;
+}
+
+.secondary.listItem-overview.listItemBodyText {
+  height: 61px;
+  margin: 0;
+}
