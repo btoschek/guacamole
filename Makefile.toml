@@ -1,0 +1,11 @@
+[tasks.dev-server]
+script = '''python -m http.server'''
+
+[tasks.watch-sass]
+script = '''sass --watch ./src/main.scss ./build/compiled.css'''
+
+[tasks.dev]
+run_task = { name = ["dev-server", "watch-sass"], parallel = true }
+
+[tasks.build]
+script = '''sass ./src/main.scss ./build/compiled.css'''

@@ -1,0 +1,30 @@
+// Progress bars covering full height with semi-transparent
+// background (episodes, movies)
+.innerCardFooter.fullInnerCardFooter.innerCardFooterClear {
+
+  background: transparent;
+  inset: 0;
+  margin: 0;
+
+  // Full height image overlay
+  .itemProgressBar {
+
+    height: 100%;
+    background-color: #0000;
+
+    // Progress bar background (semi-opaque)
+    .itemProgressBarForeground {
+      background-color: rgba(#000, 0.35);
+
+      // Create progress bar at the bottom
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--color-1);
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.innerCardFooter.fullInnerCardFooter.innerCardFooterClear {
+  background: transparent;
+  inset: 0;
+  margin: 0;
+}
+.innerCardFooter.fullInnerCardFooter.innerCardFooterClear .itemProgressBar {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+.innerCardFooter.fullInnerCardFooter.innerCardFooterClear .itemProgressBar .itemProgressBarForeground {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.innerCardFooter.fullInnerCardFooter.innerCardFooterClear .itemProgressBar .itemProgressBarForeground:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--color-1);
+}
+
+:root {
+  --color-1: #73A761;
+  --color-2: #CCE586;
+  --color-3: #AEE48C;
+  --color-4: #D89467;
+  --color-5: #8A352E;
+  --color-text: #FFFFFF;
+}
+
+/*# sourceMappingURL=compiled.css.map */
