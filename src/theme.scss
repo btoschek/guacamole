@@ -56,6 +56,49 @@
 }
 // }}}
 
+// {{{ Re-coloring
+
+// Apply new colors to already existing elements following
+// the theme guidelines
+
+.starIcon {
+  color: var(--color-3);
+}
+
+.mediaInfoOfficialRating {
+  color: var(--color-4);
+}
+
+// Menu icon hover
+.emby-tab-button:hover,
+.button-flat:hover {
+  color: var(--color-3);
+}
+
+.favorite.ratingbutton-icon-withrating {
+  color: var(--color-4);
+}
+
+.playstatebutton-icon-played {
+  color: var(--color-4);
+}
+
+// Change color when hovering over interactable icon (episodes)
+.paper-icon-button-light:hover:not(:disabled) {
+  color: var(--color-2);
+  background-color: rgba(#000, 0.35);
+}
+// }}}
+
+// Remove information bar in season views
+.nameContainer {
+  display: none;
+}
+
+// Align information bar content with rest of buttons
+.itemMiscInfo {
+  margin-bottom: 0 !important;
+}
 // ===========================================================================================
 //    Episodes
 // ===========================================================================================
