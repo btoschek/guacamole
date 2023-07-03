@@ -1,0 +1,46 @@
+// ===========================================================================================
+//    General
+// ===========================================================================================
+
+// Round covers
+.cardPadder,
+.blurhash-canvas,
+.cardImageContainer,
+.cardScalable,
+.cardOverlayContainer {
+  border-radius: 10px !important;
+}
+
+// Blur backdrop image backgrounds in item selection views
+// (shows, movies, landing page, album selection)
+@supports (backdrop-filter: blur(15px)) {
+  .backgroundContainer.withBackdrop {
+    backdrop-filter: blur(15px);
+  }
+}
+
+// {{{ Triangular Indicators
+
+// Display counts and watch status of shows, seasons, episodes and collections
+// with a triangle in the top right corner of the thumbnail
+
+.playedIndicator,
+.countIndicator {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 1px 19px 19px;
+}
+
+.cardIndicators,
+.listItemIndicators {
+  right: 0;
+  top: 0;
+}
+
+.countIndicator,
+.fullSyncIndicator,
+.playedIndicator {
+  color: var(--color-text);
+  background: linear-gradient(-135deg, var(--color-1) 50%, transparent 50%);
+}
+// }}}

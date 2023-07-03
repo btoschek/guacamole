@@ -1,3 +1,36 @@
+.cardPadder,
+.blurhash-canvas,
+.cardImageContainer,
+.cardScalable,
+.cardOverlayContainer {
+  border-radius: 10px !important;
+}
+
+@supports (backdrop-filter: blur(15px)) {
+  .backgroundContainer.withBackdrop {
+    backdrop-filter: blur(15px);
+  }
+}
+.playedIndicator,
+.countIndicator {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 1px 19px 19px;
+}
+
+.cardIndicators,
+.listItemIndicators {
+  right: 0;
+  top: 0;
+}
+
+.countIndicator,
+.fullSyncIndicator,
+.playedIndicator {
+  color: var(--color-text);
+  background: linear-gradient(-135deg, var(--color-1) 50%, transparent 50%);
+}
+
 .innerCardFooter.fullInnerCardFooter.innerCardFooterClear {
   background: transparent;
   inset: 0;
