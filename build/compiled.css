@@ -84,6 +84,50 @@
   margin: 0;
 }
 
+:root {
+  --spoiler-blur: blur(15px);
+}
+
+@supports (backdrop-filter: blur(15px)) {
+  .listItemImage {
+    overflow: hidden;
+  }
+  div.listItemImage > button:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    backdrop-filter: var(--spoiler-blur);
+    transition: 0.2s ease-out;
+  }
+  div.listItemImage > button:nth-child(1):after {
+    width: 60px;
+    height: 60px;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  div.listItemImage > button:nth-child(1):hover:after {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  div.listItemIndicators + button {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    background: none;
+  }
+  div.listItemIndicators + button:after {
+    width: 60px;
+    height: 60px;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  div.listItemIndicators + button:hover:after {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
 .innerCardFooter.fullInnerCardFooter.innerCardFooterClear {
   background: transparent;
   inset: 0;

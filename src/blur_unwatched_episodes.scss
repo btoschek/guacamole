@@ -1,0 +1,54 @@
+:root {
+  --spoiler-blur: blur(15px);
+}
+
+// ===========================================================================================
+//    Season view
+// ===========================================================================================
+
+@mixin patched_circle {
+  &:after {
+    @include size(60px);
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .6);
+
+  }
+
+  &:hover:after {
+    background-color: rgba(0, 0, 0, .4);
+  }
+}
+
+@supports (backdrop-filter: blur(15px)) {
+
+  // Prevent blur from leaking from the main image
+  .listItemImage {
+    overflow: hidden;
+  }
+
+  // Use circle around play button to blur whole image
+  div.listItemImage > button:nth-child(1) {
+    @include size(100%);
+    border-radius: 0px;
+    backdrop-filter: var(--spoiler-blur);
+    transition: .2s ease-out;
+
+    // Put a new circle around the button
+    @include patched_circle;
+  }
+
+  // Apply modified play button to already watched episodes
+
+  // Make the button take on the full size of the episode image
+  // to provide the same look & feel as for unwatched ones
+  div.listItemIndicators + button {
+    @include size(100%);
+    border-radius: 0px;
+    background: none;
+
+    // Put a new circle around the button
+    @include patched_circle;
+  }
+}
