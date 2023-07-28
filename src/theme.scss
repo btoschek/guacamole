@@ -30,6 +30,11 @@
   }
 }
 
+// Hide alphabet selector for shows & movies
+.alphaPicker {
+  display: none;
+}
+
 // {{{ Triangular Indicators
 
 // Display counts and watch status of shows, seasons, episodes and collections
@@ -99,6 +104,7 @@
 .itemMiscInfo {
   margin-bottom: 0 !important;
 }
+
 // ===========================================================================================
 //    Episodes
 // ===========================================================================================

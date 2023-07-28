@@ -17,6 +17,10 @@
     background: transparent;
   }
 }
+.alphaPicker {
+  display: none;
+}
+
 .playedIndicator,
 .countIndicator {
   border-radius: 0;
